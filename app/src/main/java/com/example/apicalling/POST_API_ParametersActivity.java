@@ -29,7 +29,7 @@ public class POST_API_ParametersActivity extends AppCompatActivity {
         //Parameters:-1.userId 2.id
 
 
-        //Just Example Any Place Set   //Just Information(?userId=4&id=34):-https://jsonplaceholder.typicode.com/posts?userId=4&id=34
+        //Just Example Any Place Set(Parameters)
         int  username = 5;
         int password = 36;
 

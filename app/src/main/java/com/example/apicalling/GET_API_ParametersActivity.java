@@ -23,7 +23,7 @@ public class GET_API_ParametersActivity extends AppCompatActivity {
         //Method:-GET
         //Parameters:-1.userId 2.id
 
-        //Just Example Any Place Set   //Just Information(?userId=4&id=34):-https://jsonplaceholder.typicode.com/posts?userId=4&id=34
+        //Just Example Any Place Set(Parameters)   //Just Information(?userId=4&id=34):-https://jsonplaceholder.typicode.com/posts?userId=4&id=34
         int  username = 4;
         int password = 35;
 
