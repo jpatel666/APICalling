@@ -72,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
 
                                 list.add(modelClass);
 
-
                             }
                             recyclerView = findViewById(R.id.recyclerView);
 
@@ -82,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                             APIAdapter apiAdapter = new APIAdapter(MainActivity.this,list);
                             recyclerView.setAdapter(apiAdapter);
 
-                            Log.e("Response202",""+response);
+                            Log.e("Response",""+response);
 
                         } catch (JSONException e) {
 
@@ -92,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.e("Response404",""+error);
+                Log.e("Error",""+error);
             }
         });
         queue.add(stringRequest);
