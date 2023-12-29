@@ -39,7 +39,7 @@ public class APIAdapter extends RecyclerView.Adapter<APIAdapter.MyClass> {
         String title = modelClass.getTitle();
         holder.tvTitle.setText(title);
         String body = modelClass.getBody();
-        holder.tvBody.setText(title);
+        holder.tvBody.setText(body);
 
 
     }
