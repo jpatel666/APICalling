@@ -1,11 +1,11 @@
 package com.example.apicalling;
 
+import android.os.Bundle;
+import android.util.Log;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
-import android.util.Log;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -31,11 +31,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        //API Calling For Volley Library
+
+
         //1.API(Application Programming Interface)
         //2.Method Type (GET,POST)
         //3.Parameter
 
-        //Volley Library(API)
 
         //Steps To Be Checked In After API Calling
         //1.Check URL Properly
@@ -61,27 +64,27 @@ public class MainActivity extends AppCompatActivity {
 
                             ArrayList<ModelClass> list = new ArrayList<>();
 
-                            for(int i=0;i<jsonArray.length();i++){
+                            for (int i = 0; i < jsonArray.length(); i++) {
 
                                 JSONObject jsonObject = jsonArray.getJSONObject(i);
 
                                 String title = jsonObject.getString("title");
                                 String body = jsonObject.getString("body");
 
-                                ModelClass modelClass = new ModelClass(title,body);
+                                ModelClass modelClass = new ModelClass(title, body);
 
                                 list.add(modelClass);
 
                             }
                             recyclerView = findViewById(R.id.recyclerView);
 
-                            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity.this,RecyclerView.VERTICAL,false);
+                            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity.this, RecyclerView.VERTICAL, false);
                             recyclerView.setLayoutManager(linearLayoutManager);
 
-                            APIAdapter apiAdapter = new APIAdapter(MainActivity.this,list);
+                            APIAdapter apiAdapter = new APIAdapter(MainActivity.this, list);
                             recyclerView.setAdapter(apiAdapter);
 
-                            Log.e("Response",""+response);
+                            Log.e("Response", "" + response);
 
                         } catch (JSONException e) {
 
@@ -91,11 +94,10 @@ public class MainActivity extends AppCompatActivity {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.e("Error",""+error);
+                Log.e("Error", "" + error);
             }
         });
         queue.add(stringRequest);
-
 
 
     }
