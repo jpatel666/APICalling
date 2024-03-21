@@ -1,10 +1,10 @@
 package com.example.apicalling;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -30,8 +30,8 @@ public class POST_API_ParametersActivity extends AppCompatActivity {
 
 
         //Just Example Any Place Set(Parameters)
-        int  username = 5;
-        int password = 36;
+        String username = "5";
+        String password = "36";
 
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "https://jsonplaceholder.typicode.com/posts";
@@ -39,23 +39,23 @@ public class POST_API_ParametersActivity extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Log.e("ResponsePOST",""+response);
+                        Log.e("ResponsePOST", "" + response);
 
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.e("ErrorPOST",""+error);
+                Log.e("ErrorPOST", "" + error);
             }
-        }){
+        }) {
             @Nullable
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
 
                 HashMap hashMap = new HashMap();
 
-                hashMap.put("userId",username);
-                hashMap.put("id",password);
+                hashMap.put("userId", username);
+                hashMap.put("id", password);
 
                 return hashMap;
             }
