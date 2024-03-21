@@ -24,8 +24,8 @@ public class GET_API_ParametersActivity extends AppCompatActivity {
         //Parameters:-1.userId 2.id
 
         //Just Example Any Place Set(Parameters)   //Just Information(?userId=4&id=34):-https://jsonplaceholder.typicode.com/posts ?userId=4&id=34
-        String  username = "4";
-        String password = "35";
+        String  username = "1";
+        String password = "3";
 
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "https://jsonplaceholder.typicode.com/posts?userId="+username+"&id="+password;

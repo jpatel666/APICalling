@@ -30,8 +30,8 @@ public class POST_API_ParametersActivity extends AppCompatActivity {
 
 
         //Just Example Any Place Set(Parameters)
-        String username = "5";
-        String password = "36";
+        String username = "1";
+        String password = "34";
 
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "https://jsonplaceholder.typicode.com/posts";
