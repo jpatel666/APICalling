@@ -27,7 +27,7 @@ public class APIAdapter extends RecyclerView.Adapter<APIAdapter.MyClass> {
     @Override
     public APIAdapter.MyClass onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(mainActivity).inflate(R.layout.app_design_layout,parent,false);
+        View view = LayoutInflater.from(mainActivity).inflate(R.layout.app_design_layout, parent, false);
         MyClass myClass = new MyClass(view);
         return myClass;
     }
@@ -51,7 +51,8 @@ public class APIAdapter extends RecyclerView.Adapter<APIAdapter.MyClass> {
 
     public class MyClass extends RecyclerView.ViewHolder {
 
-        TextView tvTitle,tvBody;
+        TextView tvTitle, tvBody;
+
         public MyClass(@NonNull View itemView) {
             super(itemView);
 
