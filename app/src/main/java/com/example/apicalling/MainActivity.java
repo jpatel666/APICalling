@@ -32,22 +32,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        //API Calling For Volley Library
+        //GET API Calling Using Volley Library
 
-
-        //1.API(Application Programming Interface)
-        //2.Method Type (GET,POST)
-        //3.Parameter
-
-
-        //Steps To Be Checked In After API Calling
-        //1.Check URL Properly
-        //2.Check Method Type
-        //3.Check Parameter Key
-        //4.Internet Permission
-        //5.Device(Phone) Internet
-        //6.Print All Logs
-        //7.android:usesCleartextTraffic="true"
+        //URL:-https://jsonplaceholder.typicode.com/posts
+        //Method:-GET
 
 
         RequestQueue queue = Volley.newRequestQueue(this);

@@ -1,9 +1,9 @@
 package com.example.apicalling;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -19,27 +19,30 @@ public class GET_API_ParametersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_api_parameters);
 
-        //API:-https://jsonplaceholder.typicode.com/posts
-        //Method:-GET
-        //Parameters:-1.userId 2.id
+        //GET API Calling Using Volley Library
 
-        //Just Example Any Place Set(Parameters)   //Just Information(?userId=4&id=34):-https://jsonplaceholder.typicode.com/posts ?userId=4&id=34
-        String  username = "1";
-        String password = "3";
+        //URL:-https://jsonplaceholder.typicode.com/posts
+        //Parameters Key:-userId, id
+        //Parameters Value:-9, 87
+        //Method:-GET
+
+        //Parameters Set   //Just Information(?userId=9&id=87):-https://jsonplaceholder.typicode.com/posts ?userId=4 & id=34
+        String UserID = "9";
+        String ID = "87";
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "https://jsonplaceholder.typicode.com/posts?userId="+username+"&id="+password;
+        String url = "https://jsonplaceholder.typicode.com/posts?userId=" + UserID + "&id=" + ID;
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Log.e("ResponseGET",""+response);
+                        Log.e("ResponseGET", "" + response);
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.e("ErrorGET",""+error);
+                Log.e("ErrorGET", "" + error);
             }
         });
 

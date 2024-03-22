@@ -24,14 +24,17 @@ public class POST_API_ParametersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post_api_parameters);
 
-        //API:-https://jsonplaceholder.typicode.com/posts
+        //POST API Calling Using Volley Library
+
+        //URL:-https://jsonplaceholder.typicode.com/posts
+        //Parameters Key:-userId, id
+        //Parameters Value:-9, 83
         //Method:-POST
-        //Parameters:-1.userId 2.id
 
 
-        //Just Example Any Place Set(Parameters)
-        String username = "1";
-        String password = "34";
+        //Parameters Set
+        String UserID = "9";
+        String ID = "83";
 
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "https://jsonplaceholder.typicode.com/posts";
@@ -54,10 +57,17 @@ public class POST_API_ParametersActivity extends AppCompatActivity {
 
                 HashMap hashMap = new HashMap();
 
-                hashMap.put("userId", username);
-                hashMap.put("id", password);
+                hashMap.put("userId", UserID);
+                hashMap.put("id", ID);
 
                 return hashMap;
+
+                /* HashMap hashMap = new HashMap();
+
+                hashMap.put("id", ""+1);
+                hashMap.put("title", ""+"iPhone 9");
+
+                return hashMap; */
             }
         };
 
@@ -66,3 +76,11 @@ public class POST_API_ParametersActivity extends AppCompatActivity {
 
 
 }
+
+
+
+
+
+
+
+
