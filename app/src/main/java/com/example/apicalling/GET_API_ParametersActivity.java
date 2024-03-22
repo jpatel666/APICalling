@@ -26,7 +26,7 @@ public class GET_API_ParametersActivity extends AppCompatActivity {
         //Parameters Value:-9, 87
         //Method:-GET
 
-        //Parameters Set   //Just Information(?userId=9&id=87):-https://jsonplaceholder.typicode.com/posts ?userId=4 & id=34
+        //Parameters Set   //(?userId=9&id=87):-https://jsonplaceholder.typicode.com/posts ?userId=4 & id=34
         String UserID = "9";
         String ID = "87";
 
