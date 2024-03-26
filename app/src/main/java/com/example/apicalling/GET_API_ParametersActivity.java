@@ -19,7 +19,7 @@ public class GET_API_ParametersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_api_parameters);
 
-        //GET API Calling Using Volley Library
+        //GET API Calling Using Volley Library With Parameters
 
         //URL:-https://jsonplaceholder.typicode.com/posts
         //Parameters Key:-userId, id

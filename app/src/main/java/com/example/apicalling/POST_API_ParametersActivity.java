@@ -24,7 +24,7 @@ public class POST_API_ParametersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post_api_parameters);
 
-        //POST API Calling Using Volley Library
+        //POST API Calling Using Volley Library With Parameters
 
         //URL:-https://jsonplaceholder.typicode.com/posts
         //Parameters Key:-userId, id
